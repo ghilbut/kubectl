@@ -1,0 +1,5 @@
+# vi
+.sw[o|p]
+
+# JetBrains IDE tools
+.idea/
