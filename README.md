@@ -1,6 +1,7 @@
 # kubectl
 
-`kubectl` cli tool in docker container
+* `kubectl` cli tool in docker container
+* **[docker repository]** https://hub.docker.com/r/ghilbut/kubectl
 
 ## Build multi-platform images
 
@@ -18,9 +19,14 @@ $ docker buildx create --name ghilbut --driver docker-container --bootstrap --us
   * latest: v1.27.0
 
 ```bash
-$ docker buildx build --platform linux/amd64,linux/arm64 --build-arg=K8S_VERSION=v1.27.0 --target release --push -t ghilbut/kubectl:v1.27.0 .
-$ docker buildx build --platform linux/amd64,linux/arm64 --build-arg=K8S_VERSION=v1.27.0 --target release --push -t ghilbut/kubectl:v1.27 .
-$ docker buildx build --platform linux/amd64,linux/arm64 --build-arg=K8S_VERSION=v1.27.0 --target release --push -t ghilbut/kubectl:latest .
+$ docker buildx build \
+         --platform linux/amd64,linux/arm64 \
+         --build-arg=K8S_VERSION=v1.27.0 \
+         --target release \
+         --push \
+         -t ghilbut/kubectl:v1.27.0 \
+         -t ghilbut/kubectl:v1.27   \
+         -t ghilbut/kubectl:latest .
 ```
 
 ## How to use
