@@ -1,5 +1,5 @@
 # vi
-.sw[o|p]
+*.sw[o|p]
 
 # JetBrains IDE tools
 .idea/
